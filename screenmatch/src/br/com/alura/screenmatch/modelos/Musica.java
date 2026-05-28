@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.modelos;
+
 public class Musica {
     String titulo;
     String artista;

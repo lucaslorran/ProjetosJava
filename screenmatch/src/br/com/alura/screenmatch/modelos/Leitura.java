@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.modelos;
+
 import java.util.Scanner;
 
 public class Leitura {
