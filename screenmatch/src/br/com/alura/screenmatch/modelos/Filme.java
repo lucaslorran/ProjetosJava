@@ -8,7 +8,7 @@ public class Filme {
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
-    //Getters
+    //////////////////  Getters
     public int getTotalDeAvaliacoes(){
         return totalDeAvaliacoes;
     }
@@ -20,7 +20,15 @@ public class Filme {
         return (somaDasAvaliacoes / totalDeAvaliacoes);
     }
 
-    //Setters
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+    public boolean isIncluidoNoPlano() {
+        return incluidoNoPlano;
+    }
+
+    ////////////////// Setters
     public void setNome(String nome){
         this.nome = nome;
     }
@@ -31,6 +39,10 @@ public class Filme {
 
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {
         this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
     }
 
     ///////////////////////////////////////////////////////////////////////
