@@ -5,9 +5,9 @@ public class Principal {
 
         Filme meuFilme = new Filme();
 
-        meuFilme.nome = "O podereso chefão";
-        meuFilme.anoDeLancamento = 1970;
-        meuFilme.duracaoEmMinutos = 180;
+        meuFilme.setNome("O podereso chefão");
+        meuFilme.setAnoDeLancamento(1970);
+        meuFilme.setDuracaoEmMinutos(180);
 
         meuFilme.exibeFichaTecnica();
 
@@ -17,7 +17,7 @@ public class Principal {
 
         System.out.println("Total de avaliações " + meuFilme.getTotalDeAvaliacoes());
 
-        System.out.println("Avaliação: " + meuFilme.pegaMedia());
+        System.out.println("Avaliação: " + meuFilme.getMedia());
     }
 
 }
