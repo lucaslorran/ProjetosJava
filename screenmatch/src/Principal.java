@@ -1,7 +1,6 @@
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
-
 public class Principal {
     public static void main(String[] args) {
 
@@ -26,8 +25,9 @@ public class Principal {
         minhaSerie.setAnoDeLancamento(2000);
         minhaSerie.exibeFichaTecnica();
         minhaSerie.setTemporadas(10);
-        minhaSerie.setEpisodiosPorTemporada(40);
-
+        minhaSerie.setEpisodiosPorTemporada(10);
+        minhaSerie.setMinutosPorEpisodio(50);
+        System.out.println("Duração para maratonar " + minhaSerie.getNome() + ": " + minhaSerie.getDuracaoEmMinutos());
 
     }
 
