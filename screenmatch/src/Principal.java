@@ -1,5 +1,8 @@
+import br.com.alura.screenmatch.calculos.CalculadoraDeTemp;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
+
+import javax.swing.text.FlowView;
 
 public class Principal {
     public static void main(String[] args) {
@@ -28,6 +31,20 @@ public class Principal {
         minhaSerie.setEpisodiosPorTemporada(10);
         minhaSerie.setMinutosPorEpisodio(50);
         System.out.println("Duração para maratonar " + minhaSerie.getNome() + ": " + minhaSerie.getDuracaoEmMinutos());
+
+        Filme outroFilme = new Filme();
+
+        outroFilme.setNome("Avatar");
+        outroFilme.setAnoDeLancamento(2023);
+        outroFilme.setDuracaoEmMinutos(200);
+
+        CalculadoraDeTemp calculadora = new CalculadoraDeTemp();
+
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(minhaSerie);
+
+        System.out.println(calculadora.getTempoTotal());
 
     }
 
