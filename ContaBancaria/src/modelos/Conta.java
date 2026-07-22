@@ -1,11 +1,12 @@
 package modelos;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Conta {
     private double saldo;
     private double chequeEspecial;
-    private boolean usaChequeEspecial;
+    private boolean usaChequeEspecial = true;
 
     public Conta(double saldo){
         this.saldo = saldo;
@@ -19,7 +20,8 @@ public class Conta {
     }
 
     public void exibeSaldo(){
-        System.out.println("Saldo: " + this.saldo);
+        System.out.printf(Locale.of("pt","BR"),"Saldo: R$%.2f ", this.saldo);
+
     }
 
     public void exibeChequeEspecial(){
@@ -39,7 +41,7 @@ public class Conta {
         this.saldo += valor;
 
     }
-
+    
     public void sacar(Scanner scanner){
         double valor;
 
@@ -51,10 +53,17 @@ public class Conta {
         scanner.nextLine();
 
         if(this.saldo >= valor){
+
             this.saldo -= valor;
+
+        }else if(this.usaChequeEspecial && this.chequeEspecial >= valor){
+
+
+
         }else{
-            System.out.println("Não possue saldo suficiente.");
+            System.out.println("Saldo insuficiente.");
         }
+
     }
 
 }

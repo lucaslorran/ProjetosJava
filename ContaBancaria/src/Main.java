@@ -8,8 +8,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         menu(scanner);
-
-
     }
 
     public static void menu (Scanner scanner){
@@ -19,7 +17,7 @@ public class Main {
         String opcaoInformada;
 
         System.out.print("""
-                          Escolha o número de uma das operações disponíveis do sistema:
+                          Escolha o número de uma das operações disponíveis:
                             1 - Consultar saldo.
                             2 - Consultar cheque especial.
                             3 - Depositar dinheiro.
@@ -45,12 +43,6 @@ public class Main {
             case "4":
                 contaUsuario1.sacar(scanner);
                 break;
-            /*case 5:
-                break;
-            case 6:
-                break;
-            case 0:
-                break; */
             default:
                 System.out.println("Opção invalida");
                 break;
